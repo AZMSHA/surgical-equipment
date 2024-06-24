@@ -107,22 +107,10 @@
   var mainlSlider = new Swiper(".default-slider-container", {
     slidesPerView: 1,
     slidesPerGroup: 1,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      pauseOnMouseEnter: true,
-    },
-    speed: 500,
     spaceBetween: 0,
     effect: "fade",
+    speed: 10000,
     autoHeight: true, //enable auto height
-    fadeEffect: {
-      crossFade: true,
-    },
-    navigation: {
-      nextEl: ".default-slider-container .swiper-btn-next",
-      prevEl: ".default-slider-container .swiper-btn-prev",
-    },
   });
 
   // Product Single Thumb Slider Js
