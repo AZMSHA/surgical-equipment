@@ -25,17 +25,17 @@
 -----------------------------------------------------------------------
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 :root {
-  --font-family-pri: "Roboto", sans-serif;
+  --font-family-pri: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
   --font-family-sec: "Nunito Sans", sans-serif;
   --font-family-ter: Verdana, sans-serif;
   --custom-black: black;
   --color-titles: rgb(0, 0, 0);
   --theme-color: var(--custom-white);
   --font-color: var(--custom-black);
-  --custom-white: rgb(240, 240, 240);
+  --custom-white: rgb(230, 230, 230);
   --custom-white-2: rgb(240, 240, 240);
   --icons-color: var(--font-color);
   --section-desc-color: var(--custom-black);
@@ -47,7 +47,7 @@
   --font-color-dark: rgb(61, 61, 61);
   --custom-gray-2: rgb(41, 41, 41);
   --footer-sec-color: rgb(41, 41, 41);
-  --color-ter: #2fc1ff;
+  --color-ter: #0064b0;
   --translucent-accent-color: #2fc1ff8e;
   --widget-bg-color: rgb(240, 240, 240);
 }
@@ -857,21 +857,19 @@ table p {
 	Main Navigation CSS
 -----------------------------------------------------------------------
 */
-.main-menu > li {
-  margin-right: 14px;
-  padding: 3px 0;
-}
+
 .main-menu > li:last-child {
   margin-right: 0;
 }
+
 .main-menu > li > a {
   color: var(--color-titles);
   display: block;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  padding: 7px 25px;
+  padding: 0rem 0.5rem;
   position: relative;
 }
 .main-menu > li:hover > a,
@@ -1465,16 +1463,15 @@ table p {
 }
 
 .main-header-wrapper {
-  height: 114px;
-}
-
-.header-middle {
-  padding: 32px 0px;
   z-index: 2;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
+}
+
+.header-middle {
+  padding: 2rem 0px;
   background-color: var(--theme-color);
 }
 
@@ -1490,14 +1487,6 @@ table p {
   justify-content: space-between;
 }
 
-.header-middle .header-middle-align-start {
-  flex: 0.378;
-}
-
-.header-middle .header-middle-align-end {
-  flex: 0.43;
-}
-
 @media only screen and (max-width: 479.98px) {
   .header-middle .header-middle-align {
     flex-direction: column;
@@ -1507,23 +1496,10 @@ table p {
     width: 100%;
   }
 }
-.header-middle .header-middle-align-start {
-  position: relative;
-}
 
-@media only screen and (max-width: 1199px) {
-  .header-middle .header-middle-align-start {
-    left: 0;
-  }
-}
 @media only screen and (max-width: 991px) {
-  .header-middle .header-middle-align-start {
-    display: none;
-  }
-
   .header-middle .header-middle-align-center {
-    position: static;
-    transform: translate(0px, 0px);
+    display: none;
   }
 }
 
@@ -2179,6 +2155,7 @@ table p {
 }
 
 .logo-main {
+  max-width: 10rem;
 }
 
 .header-logo-area .logo-light {
@@ -2290,6 +2267,7 @@ table p {
 }
 
 .btn-menu {
+  position: relative;
   background-color: transparent;
   border: none;
   display: flex;
@@ -2305,23 +2283,49 @@ table p {
   -o-transition: all 0.2s ease-out;
   color: var(--font-color);
   background-color: var(--color-ter);
-  padding: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 999px;
+}
+
+.btn-menu i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .call-now {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   color: var(--font-color);
-  background-color: var(--color-ter);
-  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--color-ter);
+  height: 2.5rem;
+  padding: 0px 1rem;
   border-radius: 999px;
+  min-width: max-content;
+}
+
+@media only screen and (max-width: 991px) {
+  .call-now {
+    position: relative;
+    padding: 0px;
+    width: 2.5rem;
+  }
+
+  .call-now i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .call-now span {
   font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -2329,6 +2333,7 @@ table p {
   background-color: #1f1f1f;
   width: 440px;
 }
+
 @media only screen and (max-width: 991px) {
   .off-canvas-wrapper.offcanvas {
     width: 310px;
@@ -3995,9 +4000,8 @@ table p {
   justify-content: center;
   gap: 1rem;
   z-index: 1;
-  height: 22.5rem;
   color: var(--font-color);
-  padding: 0rem 1rem;
+  padding: 3rem 0rem;
 }
 
 @media only screen and (max-width: 991px) {
@@ -4020,7 +4024,7 @@ table p {
 }
 
 .feature-box-wrap .col-item p {
-  line-height: 1em;
+  line-height: 1.1em;
 }
 
 .feature-box-wrap .col-item:hover {
@@ -4131,7 +4135,7 @@ table p {
   justify-content: flex-start;
   display: flex;
   align-items: flex-start;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 @media only screen and (max-width: 1199px) {
   .feature-icon-box .inner-content .content {
@@ -4141,18 +4145,30 @@ table p {
 .feature-icon-box .inner-content .content .title {
   color: var(--color-titles);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 0;
-  line-height: 1;
+  line-height: 1.1em;
 }
 @media only screen and (max-width: 479.98px) {
   .feature-icon-box .inner-content .content .title {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 .feature-icon-box .inner-content .content p {
-  font-size: 13px;
+  font-size: 1rem;
+}
+
+/*
+-----------------------------------------------------------------------
+    Feature CSS
+-----------------------------------------------------------------------
+*/
+
+.feature-area.counter-section {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /*
