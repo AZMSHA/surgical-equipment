@@ -2030,10 +2030,6 @@ table p {
   text-decoration: none;
 }
 
-.btn-menu:hover {
-  color: var(--color-ter);
-}
-
 @media only screen and (max-width: 991px) {
   .header-info-items {
     display: none;
@@ -2288,6 +2284,17 @@ table p {
   border-radius: 999px;
 }
 
+.btn-menu:hover,
+.btn-menu:focus-visible {
+  color: var(--theme-color);
+}
+
+.btn-menu:active {
+  border: 1px solid var(--color-ter);
+  color: var(--font-color);
+  background-color: transparent;
+}
+
 .btn-menu i {
   position: absolute;
   left: 50%;
@@ -2300,12 +2307,38 @@ table p {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: var(--font-color);
+  color: var(--color-ter);
   border: 1px solid var(--color-ter);
   height: 2.5rem;
   padding: 0px 1rem;
   border-radius: 999px;
   min-width: max-content;
+}
+
+.call-now:hover i {
+  animation: ring 1s linear 0s infinite;
+}
+
+@keyframes ring {
+  from {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  6.25% {
+    transform: translate(0px, -3px) rotate(8deg);
+  }
+  12.5% {
+    transform: translate(0px, -3px) rotate(-8deg);
+  }
+  18.75% {
+    transform: translate(0px, -3px) rotate(8deg);
+  }
+  25% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  to {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
 }
 
 @media only screen and (max-width: 991px) {
