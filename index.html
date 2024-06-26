@@ -153,7 +153,15 @@
                                   >New Shoes
                                 </h2>
                               </div>
-
+                              <div class="desc-box">
+                                <p class="desc">
+                                  Lorem ipsum, dolor sit amet consectetur
+                                  adipisicing elit. Esse veritatis doloribus
+                                  alias voluptates vitae, nobis nisi corporis
+                                  blanditiis aliquam deleniti consectetur dicta
+                                  odit atque quo! Iste vitae cum nostrum fugiat?
+                                </p>
+                              </div>
                               <div class="btn-box">
                                 <a class="btn-slider" href="shop.html"
                                   >Shop Now</a
@@ -611,7 +619,7 @@
                         <iframe
                           class="footer-map"
                           width="100%"
-                          style="transform: translate(0%, -10%)"
+                          style="transform: translate(0%, -25px)"
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107699.04700236068!2d74.4599971579736!3d32.48351691670899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea5674db6cfd%3A0xa8d03983946d4744!2sSialkot%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1718282162262!5m2!1sen!2s"
                           style="border: 0"
                           allowfullscreen=""
@@ -652,114 +660,14 @@
         <span class="fa fa-angle-up"></span>
       </div>
 
-      <!--== Start Aside Cart Menu ==-->
-      <div
-        class="aside-cart-wrapper offcanvas offcanvas-end"
-        tabindex="-1"
-        id="AsideOffcanvasCart"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <div class="offcanvas-header">
-          <h1 id="offcanvasRightLabel"></h1>
-          <button
-            class="btn-aside-cart-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          >
-            Shopping Cart <i class="fa fa-chevron-right"></i>
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="aside-cart-product-list">
-            <li class="product-list-item">
-              <a href="#/" class="remove">×</a>
-              <a href="single-product.html">
-                <img
-                  src="assets/img/shop/product-mini/1.webp"
-                  width="90"
-                  height="110"
-                  alt="Image-HasTech"
-                />
-                <span class="product-title">Leather Mens Slipper</span>
-              </a>
-              <span class="product-price">1 × £69.99</span>
-            </li>
-            <li class="product-list-item">
-              <a href="#/" class="remove">×</a>
-              <a href="single-product.html">
-                <img
-                  src="assets/img/shop/product-mini/2.webp"
-                  width="90"
-                  height="110"
-                  alt="Image-HasTech"
-                />
-                <span class="product-title">Quickiin Mens shoes</span>
-              </a>
-              <span class="product-price">1 × £20.00</span>
-            </li>
-          </ul>
-          <p class="cart-total">
-            <span>Subtotal:</span><span class="amount">£89.99</span>
-          </p>
-          <a class="btn-theme" data-margin-bottom="10" href="shop-cart.html"
-            >View cart</a
-          >
-          <a class="btn-theme" href="shop-checkout.html">Checkout</a>
-        </div>
-      </div>
-      <!--== End Aside Cart Menu ==-->
-
-      <!--== Start Aside Search Menu ==-->
-      <aside
-        class="aside-search-box-wrapper offcanvas offcanvas-top"
-        tabindex="-1"
-        id="AsideOffcanvasSearch"
-        aria-labelledby="offcanvasTopLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="d-none" id="offcanvasTopLabel">Aside Search</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          >
-            <i class="pe-7s-close"></i>
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="container pt--0 pb--0">
-            <div class="search-box-form-wrap">
-              <div class="search-note">
-                <p>Start typing and press Enter to search</p>
-              </div>
-              <form action="#" method="post">
-                <div class="search-form position-relative">
-                  <label for="search-input" class="visually-hidden"
-                    >Search</label
-                  >
-                  <input
-                    id="search-input"
-                    type="search"
-                    class="form-control"
-                    placeholder="Search entire store…"
-                  />
-                  <button class="search-button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </aside>
-      <!--== End Aside Search Menu ==-->
-
       <!--== Start Side Menu ==-->
       <div
-        class="off-canvas-wrapper offcanvas offcanvas-start"
+        class="off-canvas-wrapper offcanvas offcanvas-end"
         tabindex="-1"
         id="AsideOffcanvasMenu"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        data-bs-keyboard="true"
         aria-labelledby="offcanvasExampleLabel"
       >
         <div class="offcanvas-header">
@@ -769,26 +677,12 @@
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           >
-            menu <i class="fa fa-chevron-left"></i>
+            close menu <i class="fa fa-chevron-right"></i>
           </button>
         </div>
         <div class="offcanvas-body">
-          <div class="info-items">
-            <ul>
-              <li class="number">
-                <a href="tel://0123456789"
-                  ><i class="fa fa-phone"></i>+00 123 456 789</a
-                >
-              </li>
-              <li class="email">
-                <a href="mailto://demo@example.com"
-                  ><i class="fa fa-envelope"></i>demo@example.com</a
-                >
-              </li>
-            </ul>
-          </div>
           <!-- Mobile Menu Start -->
-          <div class="mobile-menu-items">
+          <div class="mobile-menu-items d-block d-xl-none">
             <ul class="nav-menu">
               <li>
                 <a href="#">Home</a>
@@ -900,6 +794,37 @@
             </ul>
           </div>
           <!-- Mobile Menu End -->
+          <div class="info-items pt-0 pt-xl-3">
+            <h3>Lets make great things together!</h3>
+            <!--== Start widget Item ==-->
+            <div class="aside-contact-info">
+              <h4>Contact Info</h4>
+              <div>
+                <ul>
+                  <li><span>Address:</span> Your address goes here.</li>
+                  <li>
+                    <span>Phone//fax:</span>
+                    <a href="tel://0123456789">0123456789</a>
+                  </li>
+                  <li>
+                    <span>Email:</span>
+                    <a href="mailto://demo@example.com">demo@example.com</a>
+                  </li>
+                </ul>
+                <iframe
+                  class="footer-map"
+                  width="100%"
+                  style="height: 20rem"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107699.04700236068!2d74.4599971579736!3d32.48351691670899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea5674db6cfd%3A0xa8d03983946d4744!2sSialkot%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1718282162262!5m2!1sen!2s"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <!--== End widget Item ==-->
+          </div>
         </div>
       </div>
       <!--== End Side Menu ==-->
