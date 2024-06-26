@@ -4033,6 +4033,10 @@ table p {
 -----------------------------------------------------------------------
 */
 
+.gallery-category:last-child {
+  margin-bottom: 5rem;
+}
+
 .gallery-category .gallery-img {
   position: relative;
   cursor: pointer;
