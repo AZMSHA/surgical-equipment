@@ -2373,6 +2373,13 @@ table p {
     width: 310px;
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .off-canvas-wrapper.offcanvas.offcanvas-end.show {
+    width: 100% !important;
+  }
+}
+
 .off-canvas-wrapper .offcanvas-header {
   padding: 0;
 }
