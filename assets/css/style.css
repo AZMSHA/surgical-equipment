@@ -40,11 +40,12 @@
   --footer-text-color: rgb(240, 240, 240);
   --custom-gray: rgb(41, 41, 41);
   --custom-gray-light: #bababa;
+  --custom-gray-dark: #202020;
   --prices-color-gray: rgb(61, 61, 61);
   --widget-text-color: rgb(61, 61, 61);
   --font-color-dark: rgb(61, 61, 61);
   --custom-gray-2: rgb(41, 41, 41);
-  --footer-sec-color: rgb(41, 41, 41);
+  --footer-sec-color: var(--custom-gray-dark);
   --color-ter: #0064b0;
   --translucent-accent-color: #2fc1ff8e;
   --widget-bg-color: rgb(240, 240, 240);
@@ -871,6 +872,81 @@ table p {
   right: 0;
   top: 150px;
   padding-right: 230px !important;
+}
+
+/*
+-----------------------------------------------------------------------
+	Social Icons CSS
+-----------------------------------------------------------------------
+*/
+
+.social-icons-boxed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  .social-icons-boxed {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.social-icons-boxed a {
+  display: inline-block;
+  background-color: var(--footer-sec-color);
+  color: var(--custom-white);
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 37px;
+  font-size: 16px;
+  border-radius: 7px;
+}
+@media only screen and (max-width: 1199px) {
+  .social-icons-boxed a {
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    font-size: 13px;
+  }
+}
+.social-icons-boxed a + a {
+  margin-left: 10px;
+}
+.social-icons-boxed a:hover {
+  background-color: var(--color-ter);
+  color: var(--custom-white);
+}
+
+.social-icons-unboxed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.social-icons-unboxed a {
+  display: inline-block;
+  color: var(--color-ter);
+
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1199px) {
+  .social-icons-unboxed a {
+    font-size: 1rem;
+  }
+}
+
+.social-icons-unboxed a + a {
+  margin-left: 1rem;
+}
+.social-icons-unboxed a:hover {
+  color: var(--font-color);
 }
 
 /*
@@ -3703,7 +3779,7 @@ table p {
 
 .about-thumb img {
   width: 100%;
-  aspect-ratio: 1.25 / 1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 
   object-position: center;
@@ -3786,6 +3862,60 @@ table p {
     font-size: 15px;
   }
 }
+.about-default-wrapper .container .about-content .about-list {
+  border-top: 2px solid var(--color-ter);
+  padding-block-start: 1.5rem;
+}
+
+.about-default-wrapper .container .about-content .about-list li {
+  line-height: 1.3em;
+  padding: 1rem 0rem 1rem 1.5rem;
+  position: relative;
+}
+
+.about-default-wrapper .container .about-content .about-list li::before {
+  content: "\f00c"; /* Unicode for Font Awesome check icon */
+  font-family: "Font Awesome 6 Sharp";
+  font-weight: 400; /* Adjust weight as needed */
+  display: inline-block;
+  position: absolute;
+  font-size: 1.25rem;
+  left: 0;
+  top: 1em;
+  color: var(--color-ter); /* Color of the check mark */
+}
+
+.feature-box-wrap.about-count .inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.feature-box-wrap.about-count .inner-content {
+  align-items: center;
+}
+
+.feature-box-wrap.about-count .icon-box {
+  font-size: 4rem;
+  line-height: 1.2em;
+}
+
+.feature-box-wrap.about-count .icon-box > * {
+  aspect-ratio: auto;
+  max-width: none;
+}
+
+.feature-box-wrap.about-count .inner-content .content {
+  margin-left: 0rem;
+}
+
+.feature-box-wrap.about-count .inner-content .content {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 /*
 -----------------------------------------------------------------------
   Team CSS
@@ -3800,33 +3930,47 @@ table p {
 
 .team-item {
   margin-bottom: 50px;
-  max-width: 250px;
 }
 @media only screen and (max-width: 575px) {
   .team-item {
-    max-width: 290px;
     margin: 0 auto 30px;
   }
 }
-.team-item .thumb {
+
+.team-item .inner-content {
   position: relative;
+}
+
+.team-item .thumb {
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .team-item .thumb img {
-  border-radius: 50%;
-  width: 150px;
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
 }
 
-.team-item .content {
-  margin-top: 25px;
+.team-item .social-icons-unboxed {
+  border-radius: 8px;
+  background-color: white;
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, calc(-50% - 2rem));
+  padding: 0.5rem 1rem;
   text-align: center;
 }
+
+.team-item .content {
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .team-item .content .title {
   font-size: 18px;
   font-weight: 700;
@@ -3841,7 +3985,7 @@ table p {
 }
 
 .team-item .content span {
-  color: var(--custom-gray-light);
+  color: var(--custom-gray-dark);
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -11930,6 +12074,7 @@ table p {
     margin-bottom: 21px;
   }
 }
+
 .footer-main .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
