@@ -12079,44 +12079,9 @@ table p {
   }
 }
 
-.footer-main .social-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0;
-}
-@media only screen and (max-width: 767px) {
-  .footer-main .social-icons {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-.footer-main .social-icons a {
-  display: inline-block;
-  background-color: var(--footer-sec-color);
-  color: var(--custom-white);
-  width: 36px;
-  height: 36px;
-  text-align: center;
-  line-height: 37px;
-  font-size: 16px;
-  border-radius: 7px;
-}
-@media only screen and (max-width: 1199px) {
-  .footer-main .social-icons a {
-    width: 32px;
-    height: 32px;
-    line-height: 33px;
-    font-size: 13px;
-  }
-}
-.footer-main .social-icons a + a {
-  margin-left: 10px;
-}
-.footer-main .social-icons a:hover {
+.footer-main .social-icons-boxed a:hover {
   background-color: var(--color-ter);
-  color: var(--custom-white);
+  color: var(--theme-color);
 }
 @media only screen and (max-width: 767px) {
   .footer-main .widget-item {
