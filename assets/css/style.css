@@ -557,6 +557,15 @@ table p {
   background-position: top right;
   padding: 140px 0 146px;
 }
+
+.page-header-area::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background-color: var(--theme-color);
+  opacity: 0.25;
+}
+
 @media only screen and (max-width: 1199px) {
   .page-header-area {
     padding: 120px 0 126px;
