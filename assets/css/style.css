@@ -46,7 +46,7 @@
   --font-color-dark: rgb(61, 61, 61);
   --custom-gray-2: rgb(41, 41, 41);
   --footer-sec-color: var(--custom-gray-dark);
-  --color-ter: #0064b0;
+  --color-ter: #002b7f;
   --translucent-accent-color: #2fc1ff8e;
   --widget-bg-color: rgb(240, 240, 240);
 }
@@ -2243,8 +2243,18 @@ table p {
 
 .logo-main {
   max-width: 10rem;
+  width: 100%;
 }
 
+.main-header-wrapper .logo-main {
+  fill: var(--font-color);
+  
+}
+
+.footer-main .logo-main {
+  fill: var(--theme-color);
+  
+}
 .header-logo-area .logo-light {
   display: none;
 }
