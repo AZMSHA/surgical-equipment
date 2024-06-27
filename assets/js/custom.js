@@ -413,8 +413,17 @@
   });
 
   // Fancybox Js
-  $(".image-popup").fancybox();
-  $(".video-popup").fancybox();
+
+  $(document).ready(function () {
+    Fancybox.bind("[data-fancybox]", {
+      Thumbs: {
+        autoStart: true,
+        type: "modern",
+        axis: "y",
+      },
+      vertical: true,
+    });
+  });
 
   // Aos Js
   AOS.init({
