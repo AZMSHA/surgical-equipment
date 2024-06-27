@@ -184,94 +184,105 @@
           </div>
         </div>
         <!--== End Page Header Area Wrapper ==-->
-        <section class="gallery-category">
+        <section id="gallery-videos" class="gallery-category">
           <div class="container p--0">
             <div class="row">
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/25_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/25_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/yAoLSRbwxL8?si=e-AVDUArc9uO1Aac"
+                ></div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/28_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/28_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/eNdZ3vK392k?si=wGB6h5a-IukVdSFB"
+                ></div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/29_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/29_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/D0UnqGm_miA?si=G0Bm7slPkvaLG0LR"
+                ></div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/30_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/30_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/Xt2pjWoq8wI?si=AeCssucl4aegh2yi"
+                ></div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/25_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/25_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/D0UnqGm_miA?si=G0Bm7slPkvaLG0LR"
+                ></div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/28_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/28_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/yAoLSRbwxL8?si=e-AVDUArc9uO1Aac"
+                ></div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/29_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/29_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/eNdZ3vK392k?si=wGB6h5a-IukVdSFB"
+                ></div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-30">
                 <div
-                  class="gallery-img"
-                  data-src="assets/img/departments/30_pic_lrg.jpg"
-                  data-fancybox="motorbike-suits"
-                >
-                  <i class="fa-sharp fa-solid fa-expand fullscreen-hover"></i>
-                  <img src="assets/img/departments/30_pic_lrg.jpg" alt="" />
-                </div>
+                  class="gallery-video"
+                  data-src="https://youtu.be/Xt2pjWoq8wI?si=AeCssucl4aegh2yi"
+                ></div>
               </div>
             </div>
           </div>
         </section>
       </main>
       <!--== Main Content Area ==-->
+
+      <!--== Youtube Player Script ==-->
+      <div id="player"></div>
+
+      <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement("script");
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Function to extract video ID from a YouTube URL
+        function getYouTubeVideoId(url) {
+          var videoId = "";
+          var regExp =
+            /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|watch\?vi=)([^#\&\?]*).*/;
+          var match = url.match(regExp);
+          if (match && match[2].length == 11) {
+            videoId = match[2];
+          }
+          return videoId;
+        }
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        function onYouTubeIframeAPIReady() {
+          var galleryVideos = document.querySelectorAll(".gallery-video");
+          galleryVideos.forEach(function (element, index) {
+            var videoUrl = element.getAttribute("data-src");
+            var videoId = getYouTubeVideoId(videoUrl);
+            if (videoId) {
+              new YT.Player(element, {
+                videoId: videoId,
+                playerVars: {
+                  playsinline: 1,
+                },
+              });
+            }
+          });
+        }
+      </script>
+      <!--== Youtube Player Script ==-->
 
       <!--== Start Footer Area Wrapper ==-->
       <footer class="footer-area">
