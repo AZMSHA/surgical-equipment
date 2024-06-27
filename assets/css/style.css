@@ -4198,6 +4198,37 @@ table p {
   }
 }
 
+.gallery-category#gallery-catalogue ._df_thumb,
+.gallery-category#gallery-catalogue ._df_thumb .df-popup-thumb img,
+.gallery-category#gallery-catalogue ._df_thumb .df-book-wrapper,
+.gallery-category#gallery-catalogue ._df_thumb .df-book-cover {
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-category#gallery-catalogue ._df_thumb .df-book-cover > img {
+  height: 100%;
+  object-fit: fill;
+}
+
+.gallery-category#gallery-catalogue ._df_thumb {
+  height: 25rem;
+}
+@media only screen and (max-width: 1199px) {
+  .gallery-category#gallery-catalogue ._df_thumb {
+    height: 17rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .gallery-category#gallery-catalogue ._df_thumb {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 0rem 1rem;
+    height: 108vw;
+  }
+}
+
 /*
 -----------------------------------------------------------------------
     Testimonial CSS
