@@ -47,7 +47,7 @@
   --custom-gray-2: rgb(41, 41, 41);
   --footer-sec-color: var(--custom-gray-dark);
   --color-ter: #002b7f;
-  --translucent-accent-color: #2fc1ff8e;
+  --translucent-accent-color: #002b7f85;
   --widget-bg-color: rgb(240, 240, 240);
 }
 
@@ -996,41 +996,43 @@ table p {
 .has-submenu > a {
   position: relative;
 }
+
 .has-submenu > a:before {
-  content: "";
-  color: var(--custom-white);
-  font-size: 14px;
-  font-family: "FontAwesome";
+  display: inline-block;
+  content: "\f107";
+  color: var(--font-color);
+  font-size: 0.875em;
+  font-family: "Font Awesome 6 Sharp";
+  font-weight: 600;
   position: absolute;
-  right: -3px;
-  top: 0;
-  line-height: 49px;
+  right: 0px;
+  top: 0px;
+  transform: translate(60%, 0%);
 }
+
 .has-submenu:hover > .submenu-nav {
-  margin-top: 0;
+  transform: translate(0px, 6px);
   opacity: 1;
   visibility: visible;
   pointer-events: visible;
 }
 .has-submenu .submenu-nav {
-  background-color: #111;
-  border: none;
-  border-bottom: none;
-  padding: 15px 0 15px;
+  background-color: var(--theme-color);
+  padding: 10px 0 10px;
   position: absolute;
-  left: -15px;
-  top: 100%;
   opacity: 0;
-  min-width: 230px;
+  min-width: 200px;
   pointer-events: none;
-  margin-top: 30px;
+  transform: translate(0px, -30px);
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   visibility: hidden;
-  z-index: 9999;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--color-ter) var(--color-ter) transparent transparent;
 }
 @media only screen and (max-width: 1199px) {
   .has-submenu .submenu-nav {
@@ -1050,7 +1052,7 @@ table p {
   padding: 10px 25px;
 }
 .has-submenu .submenu-nav > li a {
-  color: #aaa;
+  color: var(--font-color);
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -1058,13 +1060,13 @@ table p {
   text-transform: capitalize;
 }
 .has-submenu .submenu-nav > li a:hover {
-  color: var(--custom-white);
+  color: var(--color-ter);
 }
 .has-submenu .submenu-nav > li:hover > a {
-  color: var(--custom-white);
+  color: var(--color-ter);
 }
 .has-submenu .submenu-nav > li:hover:after {
-  color: #fff !important;
+  color: var(--font-color);
 }
 .has-submenu .submenu-nav > li.has-submenu {
   position: relative;
@@ -2966,10 +2968,11 @@ table p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 748px;
+  min-height: calc(100vh - 104px);
   position: relative;
 }
-@media only screen and (max-width: 1199px) {
+
+/* @media only screen and (max-width: 1199px) {
   .home-slider-area
     .home-slider-container
     .home-slider-wrapper.slider-default
@@ -3000,7 +3003,8 @@ table p {
     .slider-content-area {
     height: auto;
   }
-}
+} */
+
 .home-slider-area
   .home-slider-container
   .home-slider-wrapper.slider-default
