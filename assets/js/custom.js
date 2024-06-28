@@ -388,29 +388,37 @@
     }
   );
 
-  // Product Slider Col4 Js
-  var testimonialSlider = new Swiper(".testimonial-slider-container", {
-    slidesPerView: 2,
-    slidesPerGroup: 1,
-    allowTouchMove: false,
-    spaceBetween: 30,
-    speed: 600,
-    breakpoints: {
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 30,
+  //Slider Certificates JS
+  var productSliderGallery = new Swiper(
+    ".cert-slider-container .certificates-slider",
+    {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      allowTouchMove: true,
+      grabCursor: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
       },
-      992: {
-        slidesPerView: 1,
-        spaceBetween: 30,
+      speed: 750,
+      pagination: {
+        el: ".swiper-pagination",
       },
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        allowTouchMove: true,
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-    },
-  });
+      spaceBetween: 30,
+      breakpoints: {
+        576: {
+          centeredSlides: false,
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+      },
+    }
+  );
 
   // Fancybox Js
 
