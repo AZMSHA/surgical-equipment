@@ -110,7 +110,6 @@
     spaceBetween: 0,
     effect: "fade",
     speed: 10000,
-    autoHeight: true, //enable auto height
   });
 
   // Product Single Thumb Slider Js

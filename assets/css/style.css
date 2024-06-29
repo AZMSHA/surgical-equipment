@@ -29,8 +29,8 @@
 
 :root {
   --font-family-pri: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
-  --font-family-sec: "Nunito Sans", sans-serif;
-  --font-family-ter: Verdana, sans-serif;
+  --font-family-sec: var(--font-family-pri);
+  --font-family-ter: var(--font-family-pri);
   --custom-black: black;
   --color-titles: rgb(0, 0, 0);
   --theme-color: var(--custom-white);
@@ -2263,9 +2263,6 @@ table p {
   fill: var(--font-color);
 }
 
-.footer-main .logo-main {
-  fill: var(--theme-color);
-}
 .header-logo-area .logo-light {
   display: none;
 }
@@ -2527,21 +2524,27 @@ table p {
 .off-canvas-wrapper.offcanvas .info-items > h3 {
   text-align: left;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .off-canvas-wrapper.offcanvas .aside-contact-info > h4 {
   margin-bottom: 0px;
-  text-decoration: underline;
-  text-underline-offset: 0.35em;
 }
 
 .off-canvas-wrapper.offcanvas .aside-contact-info ul {
   margin-bottom: 22px;
 }
-.off-canvas-wrapper.offcanvas .aside-contact-info ul > li {
+
+.off-canvas-wrapper.offcanvas
+  .aside-contact-info
+  ul.aside-contact-offices
+  > li {
   line-height: 1.1em;
-  padding: 1rem 0rem;
+  padding: 1rem 0rem 1rem;
+}
+
+.off-canvas-wrapper.offcanvas .aside-contact-info ul > li {
+  padding: 0.5rem 0rem;
 }
 
 .off-canvas-wrapper.offcanvas .aside-contact-info ul > li > a {
@@ -2555,8 +2558,34 @@ table p {
 }
 
 .off-canvas-wrapper.offcanvas .aside-contact-info ul > li > span {
-  color: var(--color-ter);
   font-weight: 700;
+}
+
+.off-canvas-wrapper.offcanvas
+  .aside-contact-info
+  ul.aside-contact-offices
+  > li
+  > span {
+  font-weight: 400;
+}
+
+.off-canvas-wrapper.offcanvas
+  .aside-contact-info
+  ul
+  > li
+  > .icon-text
+  i
+  + span {
+  font-weight: 700;
+}
+
+.off-canvas-wrapper.offcanvas .aside-contact-info ul > li > .icon-text i {
+  margin-right: 0.25rem;
+}
+
+.off-canvas-wrapper.offcanvas .aside-contact-info ul > li > .footer-map {
+  margin-top: 1rem;
+  aspect-ratio: 1;
 }
 
 .off-canvas-wrapper .info-items > ul {
@@ -11800,7 +11829,9 @@ table p {
 -----------------------------------------------------------------------
 */
 
-.cert-slider-container .product-category {
+.cert-slider-container .swiper-button-prev,
+.cert-slider-container .swiper-button-next {
+  color: var(--color-ter);
 }
 
 .departments .department-img img {
@@ -12079,8 +12110,8 @@ table p {
     font-size: 15px;
   }
 }
-.footer-area .widget-contact-wrap ul > li > span {
-  font-weight: 400;
+.footer-area .widget-contact-wrap ul > li > i {
+  margin-right: 0.25rem;
 }
 .footer-area .widget-collapsed-title {
   display: block;
@@ -12210,6 +12241,10 @@ table p {
   }
 }
 
+.footer-main .logo-main {
+  fill: var(--theme-color);
+}
+
 .footer-main .social-icons-boxed a:hover {
   background-color: var(--color-ter);
   color: var(--theme-color);
@@ -12220,7 +12255,6 @@ table p {
   }
 }
 .footer-main .widget-item.widget-services-item {
-  padding-left: 52px;
 }
 @media only screen and (max-width: 991px) {
   .footer-main .widget-item.widget-services-item {
@@ -12228,12 +12262,32 @@ table p {
   }
 }
 .footer-main .widget-item.widget-account-item {
-  padding-left: 29px;
 }
 @media only screen and (max-width: 991px) {
   .footer-main .widget-item.widget-account-item {
     padding-left: 0;
   }
+}
+
+.footer-area .overseas-offices .section-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.footer-area .overseas-offices .section-title .title {
+  color: var(--theme-color);
+
+  font-size: 2.25rem;
+  margin-bottom: 0rem;
+}
+
+.footer-area .overseas-offices .widget-item .widget-title {
+  margin-bottom: 0px;
+}
+
+.footer-main .footer-contact-map {
+  aspect-ratio: 1.5 / 1;
 }
 
 .footer-bottom {
