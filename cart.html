@@ -298,36 +298,19 @@
         </div>
         <!--== End Search Area Wrapper ==-->
 
-        <section id="product-page">
+        <section id="cart-page">
           <div class="container pb--0 pt-5">
             <div class="row">
-              <div class="col-12 col-lg-6">
-                <div class="product-image-container">
-                  <h2 class="mb-4">Product Title</h2>
-                  <img
-                    class="product-image"
-                    src="/assets/images/products/product-26-1.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div
-                class="col-12 col-lg-6 mt-5 mt-lg-0 d-flex align-items-center justify-content-start flex-column"
-              >
-                <h2 class="mb-4 align-self-start">Products In this Category</h2>
-                <form
-                  action="addtocart.php"
-                  method="post"
-                  id="category-products-list"
-                >
+              <div class="col">
+                <h2 class="mb-4 align-self-start">Inquiry Basket</h2>
+                <form action="addtocart.php" method="post" id="cart-table">
                   <table class="table">
                     <tbody>
                       <tr>
                         <td>Code</td>
-
                         <td>Name</td>
-
                         <td>Qty</td>
+                        <td>Action</td>
                       </tr>
 
                       <tr>
@@ -344,6 +327,11 @@
                             min="0"
                             type="number"
                           />
+                        </td>
+                        <td>
+                          <button type="button" class="btn-theme btn-theme-xs">
+                            Delete
+                          </button>
                         </td>
                       </tr>
 
@@ -362,6 +350,11 @@
                             type="number"
                           />
                         </td>
+                        <td>
+                          <button type="button" class="btn-theme btn-theme-xs">
+                            Delete
+                          </button>
+                        </td>
                       </tr>
 
                       <tr>
@@ -378,6 +371,11 @@
                             min="0"
                             type="number"
                           />
+                        </td>
+                        <td>
+                          <button type="button" class="btn-theme btn-theme-xs">
+                            Delete
+                          </button>
                         </td>
                       </tr>
 
@@ -396,6 +394,11 @@
                             type="number"
                           />
                         </td>
+                        <td>
+                          <button type="button" class="btn-theme btn-theme-xs">
+                            Delete
+                          </button>
+                        </td>
                       </tr>
 
                       <tr>
@@ -412,6 +415,11 @@
                             min="0"
                             type="number"
                           />
+                        </td>
+                        <td>
+                          <button type="button" class="btn-theme btn-theme-xs">
+                            Delete
+                          </button>
                         </td>
                       </tr>
 
@@ -430,6 +438,11 @@
                             type="number"
                           />
                         </td>
+                        <td>
+                          <button type="button" class="btn-theme btn-theme-xs">
+                            Delete
+                          </button>
+                        </td>
                       </tr>
 
                       <tr>
@@ -447,39 +460,10 @@
                             type="number"
                           />
                         </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-80</td>
-
-                        <td>Handle for Varicose Vein Probe Set</td>
-
                         <td>
-                          <input
-                            name="qty_8"
-                            id="qty_8"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-90</td>
-
-                        <td>Cable for Varicose Vein Probe Set</td>
-
-                        <td>
-                          <input
-                            name="qty_9"
-                            id="qty_9"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
+                          <button type="button" class="btn-theme btn-theme-xs">
+                            Delete
+                          </button>
                         </td>
                       </tr>
                     </tbody>
@@ -489,9 +473,9 @@
                     class="col-12 d-flex align-items-center justify-content-center mt-4"
                   >
                     <input
-                      onclick="window.location.href='/cart.html'; return false;"
                       class="btn-theme"
-                      value="Add To Enquiry"
+                      value="Get A Quote"
+                      onclick="window.location.href='/quote.html'; return false;"
                       type="submit"
                     />
                   </div>

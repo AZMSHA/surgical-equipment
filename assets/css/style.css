@@ -449,6 +449,10 @@ table p {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
 }
+
+.btn-theme.btn-theme-xs {
+  padding: 0.75rem;
+}
 @media only screen and (max-width: 1199px) {
   .btn-theme {
     font-weight: 500;
@@ -2460,6 +2464,8 @@ table p {
 
 .main-content {
   min-height: 80vh;
+
+  margin-bottom: 5rem;
 }
 
 .off-canvas-wrapper.offcanvas {
@@ -4155,10 +4161,6 @@ table p {
   background-color: var(--custom-gray);
 }
 
-.gallery-category:last-child {
-  margin-bottom: 5rem;
-}
-
 .gallery-category .gallery-img {
   position: relative;
   cursor: pointer;
@@ -4392,13 +4394,67 @@ table p {
 }
 /*
 -----------------------------------------------------------------------
-    Product CSS
+    Product Page CSS
 -----------------------------------------------------------------------
 */
 
+#product-page {
+  border-top: 2px solid var(--color-ter);
+}
+
+#product-page .product-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+#product-page #category-products-list .table {
+  --bs-table-border-color: var(--color-ter);
+}
+
+#product-page #category-products-list .table td {
+  background-color: transparent;
+}
+
 /*
 -----------------------------------------------------------------------
-    Testimonial CSS
+    Cart Page CSS
+-----------------------------------------------------------------------
+*/
+
+#cart-page {
+  border-top: 2px solid var(--color-ter);
+}
+
+#cart-page #cart-table .table {
+  --bs-table-border-color: var(--color-ter);
+}
+
+#cart-page #cart-table .table td {
+  background-color: transparent;
+}
+
+/*
+-----------------------------------------------------------------------
+   Quote Page CSS
+-----------------------------------------------------------------------
+*/
+
+#quote-page {
+  border-top: 2px solid var(--color-ter);
+}
+
+#quote-page #quote-table .table {
+  --bs-table-border-color: var(--color-ter);
+}
+
+#quote-page #quote-table .table td {
+  background-color: transparent;
+}
+
+/*
+-----------------------------------------------------------------------
+Testimonial CSS
 -----------------------------------------------------------------------
 */
 .testimonial-item {
