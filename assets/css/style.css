@@ -122,6 +122,7 @@ h6,
   font-family: var(--font-family-sec);
   font-weight: 700;
   line-height: 1.2em;
+  text-transform: capitalize;
   margin-bottom: 10px;
   margin-top: 0;
 }
@@ -2528,6 +2529,7 @@ table p {
 }
 
 .off-canvas-wrapper.offcanvas .aside-contact-info > h4 {
+  margin-top: 3rem;
   margin-bottom: 0px;
 }
 
@@ -4085,6 +4087,74 @@ table p {
 -----------------------------------------------------------------------
 */
 
+.gallery-search-area .gallery-searchbox {
+  position: relative;
+}
+.gallery-search-area .gallery-searchbox .form-control {
+  border: 1px solid var(--color-ter);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 10000px;
+  background-clip: inherit;
+  color: var(--font-color);
+  font-size: 14px;
+  height: 3rem;
+  padding: 5px 73px 5px 21px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.gallery-search-area
+  .gallery-searchbox
+  .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #989898;
+}
+.gallery-search-area .gallery-searchbox .form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #989898;
+}
+.gallery-search-area .gallery-searchbox .form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #989898;
+}
+.gallery-search-area .gallery-searchbox .form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #989898;
+}
+.gallery-search-area .gallery-searchbox .btn-submit {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-ter);
+  border-radius: 0 10000px 10000px 0;
+  border: none;
+  color: var(--custom-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  font-size: 25px;
+  line-height: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.gallery-search-area .gallery-searchbox .btn-submit:hover {
+  background-color: var(--custom-gray-2);
+}
+
 .gallery-category:last-child {
   margin-bottom: 5rem;
 }
@@ -4245,7 +4315,13 @@ table p {
 }
 
 .gallery-category#gallery-catalogue ._df_thumb {
+  margin: 0 !important;
   height: 25rem;
+}
+
+.gallery-category#gallery-catalogue ._df_thumb:hover,
+.gallery-category#gallery-catalogue ._df_thumb:focus-visible {
+  z-index: 1;
 }
 @media only screen and (max-width: 1199px) {
   .gallery-category#gallery-catalogue ._df_thumb {
