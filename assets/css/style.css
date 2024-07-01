@@ -2454,6 +2454,28 @@ table p {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+
+  @keyframes ring {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    6.25% {
+      transform: translate(-50%, calc(-50% - 3px)) rotate(8deg);
+    }
+    12.5% {
+      transform: translate(-50%, calc(-50% - 3px)) rotate(-8deg);
+    }
+    18.75% {
+      transform: translate(-50%, calc(-50% - 3px)) rotate(8deg);
+    }
+    25% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
 }
 
 .call-now span {
@@ -4426,14 +4448,19 @@ table p {
   border-top: 2px solid var(--color-ter);
 }
 
-#cart-page #cart-table .table {
-  --bs-table-border-color: var(--color-ter);
+.form-control[type="number"] {
+  max-width: 4.5rem;
 }
 
-#cart-page #cart-table .table td {
-  background-color: transparent;
+#cart-page .table-custom .table-row {
+  border-bottom: 1px solid var(--color-ter);
 }
 
+@media only screen and (max-width: 576px) {
+  #cart-page .table-custom .table-row .cart-product-name-container {
+    line-height: 1.1em;
+  }
+}
 /*
 -----------------------------------------------------------------------
    Quote Page CSS

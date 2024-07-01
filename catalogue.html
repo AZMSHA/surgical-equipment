@@ -208,9 +208,20 @@
                       id="searchbox-gallery-search"
                       class="form-control"
                       placeholder="Search"
-                      name="Searh String"
+                      name="Search String"
                     />
-                    <button class="btn-submit" type="submit">
+                    <script>
+                      function goToSearch(event) {
+                        event.preventDefault();
+                        window.location.href = "/search-results.html";
+                        return false;
+                      }
+                    </script>
+                    <button
+                      onclick="goToSearch(event)"
+                      class="btn-submit"
+                      type="submit"
+                    >
                       <i class="fa-sharp fa-thin fa-magnifying-glass"></i>
                     </button>
                   </div>

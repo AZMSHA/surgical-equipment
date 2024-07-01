@@ -303,172 +303,281 @@
             <div class="row">
               <div class="col">
                 <h2 class="mb-4 align-self-start">Inquiry Basket</h2>
-                <form action="addtocart.php" method="post" id="cart-table">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>Code</td>
-                        <td>Name</td>
-                        <td>Qty</td>
-                        <td>Action</td>
-                      </tr>
+                <form action="addtocart.php" method="post" id="cart-form">
+                  <div class="row table-custom">
+                    <div class="row col-12 pb-2 table-row d-none d-sm-flex">
+                      <div class="col-2"><b>Code</b></div>
+                      <div class="col"><b>Name</b></div>
+                      <div class="col-2 col-lg-1"><b>Qty</b></div>
+                      <div class="col-2 col-xl-1"><b>Action</b></div>
+                    </div>
+                    <div class="row mt-2 pb-2 col-12 table-row">
+                      <div class="col-sm-2 cart-product-code">
+                        <b class="d-inline d-sm-none">Code:</b>
+                        <span class="cart-product-code-container"
+                          >10-350-00</span
+                        >
+                      </div>
+                      <div class="col-12 col-sm cart-product-name">
+                        <b class="d-block d-sm-none">Name:</b>
+                        <p class="cart-product-name-container">
+                          Nabatoff Varicose Vein Probe Set with Box
+                        </p>
+                      </div>
+                      <div
+                        class="col-6 col-sm-2 col-lg-1 cart-product-quantity"
+                      >
+                        <b class="d-block d-sm-none">Quantity:</b>
+                        <input
+                          name="qty_1"
+                          id="qty_1"
+                          class="form-control cart-product-quantity-input"
+                          value="0"
+                          min="0"
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="mt-3 mt-sm-0 col-6 col-sm-2 col-xl-1 cart-product-action d-flex align-items-end align-items-sm-start justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn-theme btn-theme-xs cart-product-action-button"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row mt-2 pb-2 col-12 table-row">
+                      <div class="col-sm-2 cart-product-code">
+                        <b class="d-inline d-sm-none">Code:</b>
+                        <span class="cart-product-code-container"
+                          >10-350-00</span
+                        >
+                      </div>
+                      <div class="col-12 col-sm cart-product-name">
+                        <b class="d-block d-sm-none">Name:</b>
+                        <p class="cart-product-name-container">
+                          Nabatoff Varicose Vein Probe Set with Box
+                        </p>
+                      </div>
+                      <div
+                        class="col-6 col-sm-2 col-lg-1 cart-product-quantity"
+                      >
+                        <b class="d-block d-sm-none">Quantity:</b>
+                        <input
+                          name="qty_1"
+                          id="qty_1"
+                          class="form-control cart-product-quantity-input"
+                          value="0"
+                          min="0"
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="mt-3 mt-sm-0 col-6 col-sm-2 col-xl-1 cart-product-action d-flex align-items-end align-items-sm-start justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn-theme btn-theme-xs cart-product-action-button"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row mt-2 pb-2 col-12 table-row">
+                      <div class="col-sm-2 cart-product-code">
+                        <b class="d-inline d-sm-none">Code:</b>
+                        <span class="cart-product-code-container"
+                          >10-350-00</span
+                        >
+                      </div>
+                      <div class="col-12 col-sm cart-product-name">
+                        <b class="d-block d-sm-none">Name:</b>
+                        <p class="cart-product-name-container">
+                          Nabatoff Varicose Vein Probe Set with Box
+                        </p>
+                      </div>
+                      <div
+                        class="col-6 col-sm-2 col-lg-1 cart-product-quantity"
+                      >
+                        <b class="d-block d-sm-none">Quantity:</b>
+                        <input
+                          name="qty_1"
+                          id="qty_1"
+                          class="form-control cart-product-quantity-input"
+                          value="0"
+                          min="0"
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="mt-3 mt-sm-0 col-6 col-sm-2 col-xl-1 cart-product-action d-flex align-items-end align-items-sm-start justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn-theme btn-theme-xs cart-product-action-button"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row mt-2 pb-2 col-12 table-row">
+                      <div class="col-sm-2 cart-product-code">
+                        <b class="d-inline d-sm-none">Code:</b>
+                        <span class="cart-product-code-container"
+                          >10-350-00</span
+                        >
+                      </div>
+                      <div class="col-12 col-sm cart-product-name">
+                        <b class="d-block d-sm-none">Name:</b>
+                        <p class="cart-product-name-container">
+                          Nabatoff Varicose Vein Probe Set with Box
+                        </p>
+                      </div>
+                      <div
+                        class="col-6 col-sm-2 col-lg-1 cart-product-quantity"
+                      >
+                        <b class="d-block d-sm-none">Quantity:</b>
+                        <input
+                          name="qty_1"
+                          id="qty_1"
+                          class="form-control cart-product-quantity-input"
+                          value="0"
+                          min="0"
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="mt-3 mt-sm-0 col-6 col-sm-2 col-xl-1 cart-product-action d-flex align-items-end align-items-sm-start justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn-theme btn-theme-xs cart-product-action-button"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row mt-2 pb-2 col-12 table-row">
+                      <div class="col-sm-2 cart-product-code">
+                        <b class="d-inline d-sm-none">Code:</b>
+                        <span class="cart-product-code-container"
+                          >10-350-00</span
+                        >
+                      </div>
+                      <div class="col-12 col-sm cart-product-name">
+                        <b class="d-block d-sm-none">Name:</b>
+                        <p class="cart-product-name-container">
+                          Nabatoff Varicose Vein Probe Set with Box
+                        </p>
+                      </div>
+                      <div
+                        class="col-6 col-sm-2 col-lg-1 cart-product-quantity"
+                      >
+                        <b class="d-block d-sm-none">Quantity:</b>
+                        <input
+                          name="qty_1"
+                          id="qty_1"
+                          class="form-control cart-product-quantity-input"
+                          value="0"
+                          min="0"
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="mt-3 mt-sm-0 col-6 col-sm-2 col-xl-1 cart-product-action d-flex align-items-end align-items-sm-start justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn-theme btn-theme-xs cart-product-action-button"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row mt-2 pb-2 col-12 table-row">
+                      <div class="col-sm-2 cart-product-code">
+                        <b class="d-inline d-sm-none">Code:</b>
+                        <span class="cart-product-code-container"
+                          >10-350-00</span
+                        >
+                      </div>
+                      <div class="col-12 col-sm cart-product-name">
+                        <b class="d-block d-sm-none">Name:</b>
+                        <p class="cart-product-name-container">
+                          Nabatoff Varicose Vein Probe Set with Box
+                        </p>
+                      </div>
+                      <div
+                        class="col-6 col-sm-2 col-lg-1 cart-product-quantity"
+                      >
+                        <b class="d-block d-sm-none">Quantity:</b>
+                        <input
+                          name="qty_1"
+                          id="qty_1"
+                          class="form-control cart-product-quantity-input"
+                          value="0"
+                          min="0"
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="mt-3 mt-sm-0 col-6 col-sm-2 col-xl-1 cart-product-action d-flex align-items-end align-items-sm-start justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn-theme btn-theme-xs cart-product-action-button"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row mt-2 pb-2 col-12 table-row">
+                      <div class="col-sm-2 cart-product-code">
+                        <b class="d-inline d-sm-none">Code:</b>
+                        <span class="cart-product-code-container"
+                          >10-350-00</span
+                        >
+                      </div>
+                      <div class="col-12 col-sm cart-product-name">
+                        <b class="d-block d-sm-none">Name:</b>
+                        <p class="cart-product-name-container">
+                          Nabatoff Varicose Vein Probe Set with Box
+                        </p>
+                      </div>
+                      <div
+                        class="col-6 col-sm-2 col-lg-1 cart-product-quantity"
+                      >
+                        <b class="d-block d-sm-none">Quantity:</b>
+                        <input
+                          name="qty_1"
+                          id="qty_1"
+                          class="form-control cart-product-quantity-input"
+                          value="0"
+                          min="0"
+                          type="number"
+                        />
+                      </div>
+                      <div
+                        class="mt-3 mt-sm-0 col-6 col-sm-2 col-xl-1 cart-product-action d-flex align-items-end align-items-sm-start justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn-theme btn-theme-xs cart-product-action-button"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
 
-                      <tr>
-                        <td>10-350-00</td>
-
-                        <td>Nabatoff Varicose Vein Probe Set with Box</td>
-
-                        <td>
-                          <input
-                            name="qty_1"
-                            id="qty_1"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                        <td>
-                          <button type="button" class="btn-theme btn-theme-xs">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-02</td>
-
-                        <td>Probe Plastic for Varicose Vein Probe Set</td>
-
-                        <td>
-                          <input
-                            name="qty_2"
-                            id="qty_2"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                        <td>
-                          <button type="button" class="btn-theme btn-theme-xs">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-03</td>
-
-                        <td>Olive 3mm for Varicose Vein Probe Set</td>
-
-                        <td>
-                          <input
-                            name="qty_3"
-                            id="qty_3"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                        <td>
-                          <button type="button" class="btn-theme btn-theme-xs">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-06</td>
-
-                        <td>Olive 6mm for Varicose Vein Probe Set</td>
-
-                        <td>
-                          <input
-                            name="qty_4"
-                            id="qty_4"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                        <td>
-                          <button type="button" class="btn-theme btn-theme-xs">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-09</td>
-
-                        <td>Olive 9mm for Varicose Vein Probe Set</td>
-
-                        <td>
-                          <input
-                            name="qty_5"
-                            id="qty_5"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                        <td>
-                          <button type="button" class="btn-theme btn-theme-xs">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-12</td>
-
-                        <td>Olive 12mm for Varicose Vein Probe Set</td>
-
-                        <td>
-                          <input
-                            name="qty_6"
-                            id="qty_6"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                        <td>
-                          <button type="button" class="btn-theme btn-theme-xs">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>10-350-15</td>
-
-                        <td>Olive 15mm for Varicose Vein Probe Set</td>
-
-                        <td>
-                          <input
-                            name="qty_7"
-                            id="qty_7"
-                            class="form-control"
-                            value="0"
-                            min="0"
-                            type="number"
-                          />
-                        </td>
-                        <td>
-                          <button type="button" class="btn-theme btn-theme-xs">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
+                  <div
+                    class="col-12 d-flex align-items-center justify-content-center mt-4"
+                  >
+                    <b>Total Quantity: </b>
+                    <span class="total-quantity">24</span>
+                  </div>
                   <div
                     class="col-12 d-flex align-items-center justify-content-center mt-4"
                   >
