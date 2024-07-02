@@ -4,7 +4,7 @@ separte search results page (use subdomain)
 
 References:
 http://www.sevetlana.biz/ (logo)
-https://www.shahjahan-enterprises.com/ (search bar)
+https://www.shahjahan-enterprises.com/ (search , product page, quote form and inquiry basket)
 
 Designer:
 hero banner instrument should have logo
