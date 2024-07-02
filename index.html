@@ -222,7 +222,8 @@
                   <div class="feature-box-wrap">
                     <div
                       data-aos="fade-down"
-                      data-aos-duration="250"
+                      data-aos-duration="750"
+                      data-aos-easing="ease-out"
                       class="col-item"
                     >
                       <div class="feature-icon-box">
@@ -244,8 +245,9 @@
                     </div>
                     <div
                       data-aos="fade-down"
-                      data-aos-duration="250"
-                      data-aos-delay="50"
+                      data-aos-duration="750"
+                      data-aos-easing="ease-out"
+                      data-aos-delay="100"
                       class="col-item"
                     >
                       <div class="feature-icon-box">
@@ -265,8 +267,9 @@
                     </div>
                     <div
                       data-aos="fade-down"
-                      data-aos-duration="250"
-                      data-aos-delay="100"
+                      data-aos-duration="750"
+                      data-aos-easing="ease-out"
+                      data-aos-delay="200"
                       class="col-item"
                     >
                       <div class="feature-icon-box">
@@ -288,8 +291,9 @@
                     </div>
                     <div
                       data-aos="fade-down"
-                      data-aos-duration="250"
-                      data-aos-delay="150"
+                      data-aos-duration="750"
+                      data-aos-easing="ease-out"
+                      data-aos-delay="300"
                       class="col-item"
                     >
                       <div class="feature-icon-box">
@@ -361,7 +365,8 @@
           style="
             background-image: url(/assets/surgical/Banners/dummy-background-compressed.jpg);
           "
-          class="feature-area counter-section"
+          class="feature-area"
+          id="counter-section"
         >
           <div class="container pb--0 pt--0">
             <div class="row">
@@ -383,7 +388,12 @@
                       <div class="feature-icon-box">
                         <div class="inner-content">
                           <div class="icon-box">
-                            <span class="count">50</span>
+                            <span
+                              data-counter-start="0"
+                              data-counter="50"
+                              class="count"
+                              >0</span
+                            >
                           </div>
                           <div class="content">
                             <h5 class="title">Free Home Delivary</h5>
@@ -399,7 +409,12 @@
                       <div class="feature-icon-box">
                         <div class="inner-content">
                           <div class="icon-box">
-                            <span class="count">500</span>
+                            <span
+                              data-counter-start="400"
+                              data-counter="500"
+                              class="count"
+                              >0</span
+                            >
                           </div>
                           <div class="content">
                             <h5 class="title">Secure Payment</h5>
@@ -415,7 +430,12 @@
                       <div class="feature-icon-box">
                         <div class="inner-content">
                           <div class="icon-box">
-                            <span class="count">5</span>
+                            <span
+                              data-counter-start="0"
+                              data-counter="5"
+                              class="count"
+                              >0</span
+                            >
                           </div>
                           <div class="content">
                             <h5 class="title">Order Discount</h5>
@@ -431,7 +451,12 @@
                       <div class="feature-icon-box">
                         <div class="inner-content">
                           <div class="icon-box">
-                            <span class="count">00</span>
+                            <span
+                              data-counter-start="0"
+                              data-counter="78"
+                              class="count"
+                              >0</span
+                            >
                           </div>
                           <div class="content">
                             <h5 class="title">24 x 7 Online Support</h5>
@@ -483,6 +508,42 @@
             </div>
           </div>
         </div>
+        <script>
+          // Define the callback function for the IntersectionObserver
+          function handleIntersection(entries, observer) {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counterEl = entry.target;
+                const count = counterEl.dataset.counter;
+                const countStart = counterEl.dataset.counterStart;
+                console.log(countStart);
+                for (
+                  let index = countStart, intervalStart = 0;
+                  index <= count;
+                  index++, intervalStart++
+                ) {
+                  setTimeout(() => {
+                    counterEl.innerHTML = index;
+                  }, intervalStart * 25);
+                }
+                observer.unobserve(entry.target);
+              }
+            });
+          }
+
+          // Create an IntersectionObserver instance
+          const observer = new IntersectionObserver(handleIntersection, {
+            root: null, // Use the viewport as the container
+            rootMargin: "0px", // Margin around the root
+            threshold: 1, // Trigger the callback when 50% of the element is visible
+          });
+
+          const counterEls = document.getElementsByClassName("count");
+          const counterElArr = Array.from(counterEls);
+          counterElArr.forEach((element) => {
+            observer.observe(element);
+          });
+        </script>
         <!--== End Feature Area Wrapper ==-->
 
         <!--== Start Product Category Area Wrapper ==-->
@@ -503,7 +564,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-8 col-sm-12">
+            <div class="col-8 col-sm-12 position-relative">
               <div class="certificates-slider container p-0">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">

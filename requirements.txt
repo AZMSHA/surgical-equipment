@@ -1,0 +1,15 @@
+backend:
+When selecting category each category search page should show name of category in header banner area, products search page will just show: "Showing results for: (their search)"
+separte search results page (use subdomain)
+
+References:
+http://www.sevetlana.biz/ (logo)
+https://www.shahjahan-enterprises.com/ (search bar)
+
+Designer:
+hero banner instrument should have logo
+remove insturments and add industries to logo
+
+Customers Job:
+Create a video by finding a video like this
+"https://youtu.be/sJZqd_TNM_o" add their intro for the home page bio section
