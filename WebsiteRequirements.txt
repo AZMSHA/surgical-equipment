@@ -1,7 +1,3 @@
-backend:
-When selecting category each category search page should show name of category in header banner area, products search page will just show: "Showing results for: (their search)"
-separte search results page (use subdomain)
-
 References:
 http://www.sevetlana.biz/ (logo)
 https://www.shahjahan-enterprises.com/ (search , product page, quote form and inquiry basket)
@@ -13,3 +9,19 @@ remove insturments and add industries to logo
 Customers Job:
 Create a video by finding a video like this
 "https://youtu.be/sJZqd_TNM_o" add their intro for the home page bio section
+
+
+//////////////////////////////////////////BACK END//////////////////////////////////////////
+give option to search by reference , and allow website owner to be able to add product reference, category , sub category , catalogue page number reference etc
+give options to add different social links , hide inactive ones and show active ones with icons
+When selecting category each category search page should show name of category in header banner area, products search page will just show: "Showing results for: (their search)"
+separte search results page (use subdomain)
+
+PRODUCT SEARCH:
+when searched by product name or reference it shows singular product links when clicked on any singular product link it takes us to a page that shows only one image (it shows the image of the catalogue page where that product is located) and on the right side of the image it shows a table which lists the products that are on the catalogue page, this table allows us to add products that are on the catalogue page to the enquiry basket(which i created)!
+
+CATEGORY SEARCH:
+but when searched by category shows search result links that link to subcategories, when clicked on the link it takes us to subcategory page that has multiple subpages; the subcategory page has multiple sub pages related to the sub category we selected and each page will show products of that sub-category on the right side of that sub category
+
+Socials:
+Facebook, insta, pinterest, linkedIn, twitter

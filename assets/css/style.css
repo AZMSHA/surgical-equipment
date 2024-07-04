@@ -741,6 +741,10 @@ table p {
   background-color: var(--theme-color);
 }
 
+.form-check-input:hover {
+  cursor: pointer;
+}
+
 .gallery-search-area .search-controls .form-check-input:focus {
   box-shadow: none;
 }

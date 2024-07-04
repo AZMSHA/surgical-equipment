@@ -366,23 +366,25 @@
                       <div class="mt-2 mb-2 col-lg-5 col-xl-3">
                         <div class="form-floating">
                           <input
+                            required
                             type="text"
                             id="name"
                             name="Name"
                             class="form-control"
                             placeholder="Type your name"
-                          /><label for="name">Name</label>
+                          /><label for="name">Name*</label>
                         </div>
                       </div>
                       <div class="mt-2 mb-2 col-12">
                         <div class="form-floating">
                           <input
+                            required
                             type="text"
                             id="address1"
                             name="address1"
                             class="form-control"
                             placeholder="Enter your address"
-                          /><label for="address1">Address 1</label>
+                          /><label for="address1">Primary Address*</label>
                         </div>
                       </div>
                       <div class="mt-2 mb-2 col-12">
@@ -393,12 +395,15 @@
                             name="address2"
                             class="form-control"
                             placeholder="Enter your address"
-                          /><label for="address2">Address 2</label>
+                          /><label for="address2"
+                            >Secondary Address (optional)</label
+                          >
                         </div>
                       </div>
                       <div class="mt-2 mb-2 col-lg-5 col-xl-3">
                         <div class="form-floating">
                           <select
+                            required
                             name="country"
                             id="country"
                             class="form-control form-select"
@@ -825,7 +830,7 @@
 
                             <option value="Zimbabwe">Zimbabwe</option>
                           </select>
-                          <label for="country">Country</label>
+                          <label for="country">Country*</label>
                         </div>
                       </div>
                       <div class="w-100"></div>
@@ -833,6 +838,7 @@
                         <div class="form-floating">
                           <input
                             type="tel"
+                            required
                             id="phoneNumber"
                             name="phoneNumber"
                             pattern="[0-9+-]*"
@@ -841,7 +847,7 @@
                             maxlength="17"
                             class="form-control"
                             placeholder="Provide your phone number"
-                          /><label for="phoneNumber">Phone Number</label>
+                          /><label for="phoneNumber">Phone Number*</label>
                           <script>
                             document
                               .getElementById("phoneNumber")
@@ -857,11 +863,12 @@
                       <div class="mt-2 mb-2 col-lg-5 col-xl-3">
                         <div class="form-floating">
                           <input
+                            required
                             type="email"
                             id="email"
                             class="form-control"
                             placeholder="Provide your email"
-                          /><label for="email">Email</label>
+                          /><label for="email">Email*</label>
                         </div>
                       </div>
                     </div>
@@ -873,6 +880,7 @@
                             name="Payment Type"
                             class="form-control form-select"
                             id="paymentType"
+                            required
                           >
                             <option value="">Select</option>
 
@@ -881,7 +889,7 @@
                             <option value="C&amp;F">C&amp;F</option>
 
                             <option value="CIF">CIF</option></select
-                          ><label for="paymentType">Payment Type</label>
+                          ><label for="paymentType">Payment Type*</label>
                         </div>
                       </div>
                       <div class="mt-2 mb-2 col-lg-4 col-xl-3">
@@ -890,6 +898,7 @@
                             name="Shipping Type"
                             class="form-control form-select"
                             id="shippingType"
+                            required
                           >
                             <option value="">Select</option>
 
@@ -900,7 +909,7 @@
                             <option value="BY COURIER">
                               BY COURIER
                             </option></select
-                          ><label for="paymentType">Shipping Type</label>
+                          ><label for="paymentType">Shipping Type*</label>
                         </div>
                       </div>
                       <div class="mt-2 mb-2 col-12">
@@ -912,7 +921,9 @@
                             style="height: 10rem; max-height: 15rem"
                             placeholder="Have any Special Requirements?"
                           ></textarea
-                          ><label for="message">Comment / Message</label>
+                          ><label for="message"
+                            >Comment / Message (optional)</label
+                          >
                         </div>
                       </div>
                       <div
@@ -920,13 +931,14 @@
                       >
                         <div class="form-floating me-3">
                           <input
+                            required
                             type="text"
                             id="securityCode"
                             name="securityCode"
                             class="form-control"
                             placeholder="Enter Security Code"
                           /><label for="securityCode"
-                            >Enter Security Code</label
+                            >Enter Security Code*</label
                           >
                         </div>
                         <span
