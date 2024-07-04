@@ -35,7 +35,7 @@
   --color-titles: var(--font-color);
   --theme-color: var(--custom-white);
   --font-color: var(--custom-black);
-  --custom-white: rgb(230, 230, 230);
+  --custom-white: rgb(255, 255, 255);
   --icons-color: var(--font-color);
   --footer-text-color: var(--theme-color);
   --custom-gray: rgb(41, 41, 41);
@@ -12558,19 +12558,21 @@ Testimonial CSS
     margin-bottom: 25px;
   }
 }
-.footer-main .widget-item.widget-services-item {
-}
+
 @media only screen and (max-width: 991px) {
   .footer-main .widget-item.widget-services-item {
     padding-left: 0;
   }
 }
-.footer-main .widget-item.widget-account-item {
-}
+
 @media only screen and (max-width: 991px) {
   .footer-main .widget-item.widget-account-item {
     padding-left: 0;
   }
+}
+
+.footer-area .overseas-offices {
+  margin-top: 4rem;
 }
 
 .footer-area .overseas-offices .section-title {
@@ -12582,7 +12584,7 @@ Testimonial CSS
 .footer-area .overseas-offices .section-title .title {
   color: var(--theme-color);
 
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin-bottom: 0rem;
 }
 
@@ -12590,8 +12592,41 @@ Testimonial CSS
   margin-bottom: 0px;
 }
 
+.footer-area .overseas-offices .widget-item,
+.footer-area .overseas-offices .widget-item .widget-collapse-body,
+.footer-area .overseas-offices .widget-item .collapse-body,
+.footer-area .overseas-offices .widget-item .widget-contact-wrap {
+  height: 100%;
+}
+
+.footer-area .overseas-offices .widget-item .widget-contact-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-area .overseas-offices .widget-contact-wrap ul {
+  margin-bottom: 0px;
+}
+
+.footer-area .overseas-offices .widget-contact-wrap ul > li {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.15em;
+  font-weight: 100;
+}
+
+.footer-area .overseas-offices .widget-contact-wrap ul > li b {
+  font-weight: 700;
+}
+
+.footer-area .overseas-offices .widget-contact-wrap ul > li i[class^="fa"] {
+  margin-right: 8px;
+}
+
 .footer-main .footer-contact-map {
   aspect-ratio: 1.5 / 1;
+  height: auto;
 }
 
 .footer-bottom {
