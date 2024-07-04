@@ -351,9 +351,43 @@
         <section id="product-page">
           <div class="container pb--0 pt-5">
             <div class="row">
-              <div class="col-12 col-lg-6">
+              <div
+                class="col-12 col-lg-6 d-flex align-items-center justify-content-start flex-column"
+              >
+                <h2 class="mb-4 align-self-center">Product Title</h2>
+                <nav
+                  aria-label="Sub Categories pages"
+                  class="shop-pagination text-center"
+                >
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Previous"
+                        ><i class="fa-sharp fa-arrow-left"></i
+                      ></a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link active" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link">5</a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Next"
+                        ><i class="fa-sharp fa-arrow-right"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </nav>
                 <div class="product-image-container">
-                  <h2 class="mb-4">Product Title</h2>
                   <img
                     class="product-image"
                     src="/assets/images/products/product-26-1.jpg"
@@ -364,7 +398,9 @@
               <div
                 class="col-12 col-lg-6 mt-5 mt-lg-0 d-flex align-items-center justify-content-start flex-column"
               >
-                <h2 class="mb-4 align-self-start">Products In this Category</h2>
+                <h2 class="mb-4">
+                  Catalogue Page Ref# <span class="ref"> 10 - 20</span>
+                </h2>
                 <form
                   action="addtocart.php"
                   method="post"

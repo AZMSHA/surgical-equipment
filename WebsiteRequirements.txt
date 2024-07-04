@@ -16,6 +16,7 @@ give option to search by reference , and allow website owner to be able to add p
 give options to add different social links , hide inactive ones and show active ones with icons
 When selecting category each category search page should show name of category in header banner area, products search page will just show: "Showing results for: (their search)"
 separte search results page (use subdomain)
+have breadcrumbs in page header area like shahjahan-enterprises
 
 PRODUCT SEARCH:
 when searched by product name or reference it shows singular product links when clicked on any singular product link it takes us to a page that shows only one image (it shows the image of the catalogue page where that product is located) and on the right side of the image it shows a table which lists the products that are on the catalogue page, this table allows us to add products that are on the catalogue page to the enquiry basket(which i created)!

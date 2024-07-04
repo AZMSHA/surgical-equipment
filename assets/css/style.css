@@ -736,6 +736,31 @@ table p {
 
 /*-------- Bootstrap Config and Margin & Padding Custom Style Css --------*/
 
+.pagination .page-link {
+  border: none;
+  color: var(--font-color);
+  line-height: 1em;
+  padding: 0.25rem 0.5rem;
+}
+
+.pagination .page-link.active {
+  color: var(--color-ter);
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.pagination .page-link:hover {
+  background-color: var(--color-ter);
+  cursor: pointer;
+  color: var(--theme-color);
+}
+
+.pagination .page-link:focus {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .form-check-input {
   border: 1px solid var(--color-ter);
   background-color: var(--theme-color);
