@@ -290,9 +290,6 @@ table p {
   justify-content: flex-end;
 }
 
-.company-bio.profile-section .profile-section-right img {
-}
-
 @media only screen and (max-width: 991px) {
   .company-bio.profile-section .profile-section-right {
     padding-top: 16px;
@@ -5136,6 +5133,7 @@ Testimonial CSS
   color: var(--custom-black);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   display: -webkit-box;
   line-height: 20px;
   overflow: hidden;
@@ -11324,7 +11322,7 @@ Testimonial CSS
 }
 @media only screen and (max-width: 767px) {
   .blog-details-item .p-image-right {
-    display: inline-block;
+    display: block;
     float: inherit;
     margin-left: 0;
     margin-top: 0;
