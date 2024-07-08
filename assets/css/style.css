@@ -65,6 +65,7 @@ body {
   word-wrap: break-word;
   caret-color: var(--color-ter);
   accent-color: var(--color-ter);
+  -webkit-font-smoothing: antialiased;
 }
 
 ::-webkit-scrollbar {
@@ -5612,6 +5613,93 @@ Testimonial CSS
 }
 .product-category:hover .product-category-content .content {
   border-color: rgba(255, 255, 255, 0.5);
+}
+
+.surgical-categories-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-ter);
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .surgical-categories-arrows .category-next,
+  .surgical-categories-arrows .category-prev {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 1.5rem;
+  }
+
+  .surgical-categories-arrows .category-next {
+    right: 5px;
+  }
+
+  .surgical-categories-arrows .category-prev {
+    left: 5px;
+  }
+}
+
+.product-categories-area .surgical-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-categories-area .surgical-category .thumb {
+  width: 150px;
+  aspect-ratio: 1;
+}
+
+@media only screen and (max-width: 992px) {
+  .product-categories-area .surgical-category .thumb {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .product-categories-area .surgical-category .thumb {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+  .product-categories-area .surgical-category .content {
+    padding: 0rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .product-categories-area .surgical-category .content {
+    padding: 0rem 1rem;
+  }
+}
+
+
+.product-categories-area .surgical-category .title {
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .product-categories-area .surgical-category .title {
+    font-size: 1rem;
+  }
+}
+
+.product-categories-area .surgical-category .desc {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.product-categories-area .surgical-category .title,
+.product-categories-area .surgical-category .desc {
+  text-align: center;
+  line-height: 1.2em;
 }
 
 .shop-top-bar {

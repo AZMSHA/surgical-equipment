@@ -190,8 +190,9 @@
   var productSliderCategories = new Swiper(
     ".product-slider-col4-container-categories",
     {
-      slidesPerView: 6,
+      slidesPerView: 1,
       slidesPerGroup: 1,
+      loop: true,
       allowTouchMove: true,
       autoplay: {
         delay: 2250,
@@ -204,10 +205,6 @@
         prevEl: ".product-swiper-btn-prev",
       },
       breakpoints: {
-        1400: {
-          slidesPerView: 5,
-          spaceBetween: 16,
-        },
         1200: {
           slidesPerView: 4,
           spaceBetween: 16,
@@ -236,7 +233,7 @@
           },
         },
         576: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 15,
           allowTouchMove: true,
           autoplay: {
@@ -256,6 +253,44 @@
       },
     }
   );
+
+  // Product Categories Slider Col4 Js
+  var productSliderCategories = new Swiper(".slider-surgical-categories", {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    loop: true,
+    allowTouchMove: true,
+    spaceBetween: 16,
+    autoplay: {
+      delay: 2250,
+    },
+    speed: 600,
+    navigation: {
+      nextEl: ".surgical-categories-arrows .category-next",
+      prevEl: ".surgical-categories-arrows .category-prev",
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 64,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 64,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+      0: {
+        spaceBetween: 16,
+      },
+    },
+  });
 
   //Slider Departments JS
   var productSliderDepartments = new Swiper(
